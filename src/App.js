@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Components
+import Preloader from './dashboard/components/preloader'
+
+const App = () => {
+
+  const IndexDB   = React.lazy(() => import('./dashboard/indexDB'))
+  const IndexUI   = React.lazy(() => import('./public_ui/indexUI'))
+  const ErrorPage = React.lazy(() => import('./error-page/errorPage'))
+
+  const url = window.location.pathname;
+
+  switch (url) {
+    case '/' :
+      return (
+        <Suspense fallback={<Preloader />}>
+          <IndexUI />
+        </Suspense>
+      )
+      break;
+
+    case '/dashboardv0.4' :
+      return (
+        <Suspense fallback={<Preloader />}>
+          <IndexDB />
+        </Suspense>
+      )
+      break;
+    
+    default :
+      return (
+        <Suspense fallback={<Preloader />}>
+          <ErrorPage />
+        </Suspense>
+      )
+  }
 }
 
 export default App;

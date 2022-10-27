@@ -1,0 +1,195 @@
+/* Custom Wrapper */
+#content-wrapper {
+    min-height: 100vh;
+    position: relative;
+    transition: 0.5s;
+}
+
+#content {
+    margin-bottom: 120px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+}
+
+/* Custom */
+
+/* Margin Custom */
+.ml-0 {
+    margin-left: 0px !important;
+}
+
+.ml-280 {
+    margin-left: 280px !important;
+}
+
+.ml-min-280 {
+    margin-left: -280px !important;
+}
+
+/* Middle Element */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Topbar */
+.bg-topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background-color: #a370f7;
+    z-index: -1;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    width: 280px;
+    padding: 10px;
+    overflow: auto;
+    position: fixed;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.sidebar .sidebar-brand {
+    font-weight: bold;
+    font-size: 15pt;
+    color: #666;
+}
+
+.sidebar .sidebar-brand:hover {
+    font-weight: bold;
+    font-size: 15pt;
+    color: black;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {      
+    background: #dee2e6;    
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 10px;
+}
+
+/* Btn Toggler */
+#btnTogglerResponsif {
+    display: none;
+}
+
+#iconTogglerDekstop {
+    font-size: 15pt;
+}
+
+#iconTogglerResponsif {
+    display: none;
+    font-size: 15pt;
+}
+
+/* CSS Responsive */
+@media screen and (max-width: 850px) {
+    .sidebar {
+        background-color: white;
+        height: 100vh;
+        width: 280px;
+        padding: 10px;
+        overflow: auto;
+        position: fixed;
+        z-index: 5;
+        transition: 0.5s;
+    }
+
+    .sidebar-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 4;
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+
+    #content-wrapper {
+        margin-left: 0px !important;
+    }
+
+    #btnTogglerResponsif {
+        display: block;
+    }
+
+    #iconTogglerDekstop {
+        display: none;
+        font-size: 15pt;
+    }
+
+    #iconTogglerResponsif {
+        display: block;
+        font-size: 15pt;
+    }
+}
+
+/* Error */
+.error-404 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Preloder Screen */
+.loading-screen {
+    position: fixed;
+    background-color: #a370f7;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: 0.2s;
+}
+
+.loading-screen .loading-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+}
+
+.loading-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a370f7;
+}
+
+.loading-icon span {
+    margin: 0px 5px 5px 0px;
+}
+
+/* Button back to top */
+.btn-scroll {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+}
