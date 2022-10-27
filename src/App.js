@@ -20,7 +20,7 @@ const App = () => {
       )
       break;
 
-    case '/dashboardv0.4' :
+    case '/dashboardv0.4/' :
       return (
         <Suspense fallback={<Preloader />}>
           <IndexDB />
