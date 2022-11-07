@@ -10,5 +10,6 @@
   - buka folder dashboardv0.4, lalu buka cmd di folder dashboardv0.4
   - tuliskan perintah :
     > npm install
+    > npm start
   - Silahkan gunakan
 </pre>
